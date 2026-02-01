@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 const IntroOverlay: React.FC = () => {
-  const [stage, setStage] = useState(0);
+  // Start at stage 1 immediately so content is visible on mount
+  const [stage, setStage] = useState(1);
   const [isVisible, setIsVisible] = useState(true);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
@@ -10,8 +11,8 @@ const IntroOverlay: React.FC = () => {
     document.body.style.overflow = 'hidden';
 
     // Sequence timing
+    // Removed the initial 500ms delay for stage 1
     const newTimers = [
-      setTimeout(() => setStage(1), 500),   // Text 1: Context
       setTimeout(() => setStage(2), 2500),  // Text 2: Theme
       setTimeout(() => setStage(3), 4500),  // Text 3: Motivation
       setTimeout(() => setStage(4), 6500),  // Title Drop (Stops here now)
