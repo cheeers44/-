@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>니콜라이 볼콘스키 | 차르의 사냥개</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Replaced 'Song Myung' with 'Nanum Myeongjo' -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@200;300;400;600;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blood: '#4a0404',
+              'blood-light': '#7f1d1d',
+              gold: '#c5a059',
+              'gold-dim': '#8a6e36',
+              imperial: '#0f172a',
+              paper: '#e2e2e2'
+            },
+            fontFamily: {
+              serif: ['"Noto Serif KR"', '"Playfair Display"', 'serif'],
+              // Added Nanum Myeongjo for headers/titles
+              myeongjo: ['"Nanum Myeongjo"', 'serif'],
+              // Updated Display to use Nanum Myeongjo for Korean title feel
+              display: ['"Cinzel"', '"Nanum Myeongjo"', 'serif'],
+              sans: ['"Noto Sans KR"', 'sans-serif'],
+              russian: ['"Vijaya"', '"Playfair Display"', 'serif'],
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #d1d5db;
+        word-break: keep-all;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      
+      /* Hide default cursor on devices that have a fine pointer (mouse) */
+      @media (hover: hover) and (pointer: fine) {
+        body, a, button, [role="button"], input, select, textarea {
+          cursor: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
